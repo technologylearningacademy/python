@@ -10,7 +10,7 @@ Documentation for lists: https://docs.python.org/3.9/tutorial/datastructures.htm
 # this is usful to keep your code clean and in smaller pieces
 # modules allow for team collaboration as one person can create one module and another person another
 # kind of like a car assembly line, some people work on the engine, others on electrical etc...
-import random
+# import random
 
 '''
 # *****EXERCISE 1*****
@@ -232,32 +232,6 @@ print(f"{row1}\n{row2}\n{row3}")
 -you will print one of three options: "You lose", "You win", or "You tied"
 
 Starter code:
-rock = """
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-"""
-paper = """
-     _______
----'    ____)____
-           ______)
-          _______)
-         _______)
----.__________)
-"""
-scissors = """
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-"""
-'''
-# ANSWER
 import random
 
 rock = """
@@ -284,25 +258,117 @@ scissors = """
       (____)
 ---.__(___)
 """
-user_selection = int(input("Select 0 for Rock, 1 for Paper or 2 for Scissors "))
-print(user_selection)
-choice_options = [rock, paper, scissors]
-print("choice options", choice_options[0])
-user_choice = choice_options[0]
-print("user choice", choice_options[0])
-computer_selection = random.choice(choice_options)
-if user_choice == 0 and computer_selection == 1:
-    print("Computer selected:", computer_selection)
-    print("You lose.")
-    if user_selection == 1 and computer_selection == 0:
-        print("Computer selected:", computer_selection)
-        print("You lose.")
-    if user_selection == 2 and computer_selection == 0:
-        print("Computer selected:", computer_selection)
-        print("You lose.")
-    if user_selection == computer_selection:
-        print("Computer selected:", computer_selection)
-        print("You tied.")
-else:
-    print("Computer selected:", computer_selection)
-    print("You win.")
+'''
+# ANSWER 1
+# import random
+#
+# rock = """
+#     _______
+# ---'   ____)
+#       (_____)
+#       (_____)
+#       (____)
+# ---.__(___)
+# """
+# paper = """
+#      _______
+# ---'    ____)____
+#            ______)
+#           _______)
+#          _______)
+# ---.__________)
+# """
+# scissors = """
+#     _______
+# ---'   ____)____
+#           ______)
+#        __________)
+#       (____)
+# ---.__(___)
+# """
+# user_option = int(input("Select 0 for Rock, 1 for Paper or 2 for Scissors\n"))
+# if user_option > 2 or user_option < 0:
+#     print("Your number is not within 0 and 2")
+#     exit()
+#
+# choice_list = [rock, paper, scissors]
+# user_selection = choice_list[user_option]
+# # print("user_selection", user_selection)
+# computer_selection = random.choice(choice_list)
+# # print("Computer_selection", computer_selection)
+#
+#
+# if user_selection == choice_list[0] and computer_selection == choice_list[1]:
+#     print("Computer chose:", choice_list[1])
+#     print("You chose", user_selection)
+#     print("You lose.")
+# elif user_selection == choice_list[1] and computer_selection == choice_list[2]:
+#     print("Computer chose:", choice_list[2])
+#     print("You chose", user_selection)
+#     print("You lose.")
+# elif user_selection == choice_list[2] and computer_selection == choice_list[0]:
+#     print("Computer chose:", choice_list[0])
+#     print("You chose", user_selection)
+#     print("You lose.")
+# elif user_selection == computer_selection:
+#     print("Computer chose:", computer_selection)
+#     print("You chose", user_selection)
+#     print("You tied")
+# else:
+#     print("Computer chose:", computer_selection)
+#     print("You chose:", user_selection)
+#     print("You won.")
+
+# ANSWER 2
+# import random
+#
+# rock = '''
+#     _______
+# ---'   ____)
+#       (_____)
+#       (_____)
+#       (____)
+# ---.__(___)
+# '''
+#
+# paper = '''
+#     _______
+# ---'   ____)____
+#           ______)
+#           _______)
+#          _______)
+# ---.__________)
+# '''
+#
+# scissors = '''
+#     _______
+# ---'   ____)____
+#           ______)
+#        __________)
+#       (____)
+# ---.__(___)
+# '''
+#
+# game_images = [rock, paper, scissors]
+#
+# user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
+# if user_choice >= 3 or user_choice < 0:
+#     print("You typed an invalid number, you lose.")
+#     exit()
+#
+# print(game_images[user_choice])
+#
+# computer_choice = random.randint(0, 2)
+# print("Computer chose:")
+# print(game_images[computer_choice])
+#
+# if user_choice == 0 and computer_choice == 2:
+#     print("You win.")
+# elif computer_choice == 0 and user_choice == 2:
+#     print("You lose.")
+# elif computer_choice > user_choice:
+#     print("You lose.")
+# elif user_choice > computer_choice:
+#     print("You win.")
+# elif computer_choice == user_choice:
+#     print("It's a tie.")
