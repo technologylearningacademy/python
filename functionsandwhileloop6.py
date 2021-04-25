@@ -39,28 +39,61 @@ Functions allow us to create a block of code that can be reused elsewhere
 #
 # my_parameter_function(3, "apples")  # this will fail
 
-# parameters with default arguments (keyword arguments)
+# parameters with default arguments(keyword arguments)
+
+
 # def my_parameter_function(qty=3, item="fruits", price=3.00):
 #     print(f"{qty} {item} costs ${price:.2f}")
-#
-#
+
+
 # my_parameter_function(2, 5.00)
 
-# def my_parameter_function(qty, item="fruits", 3.00):  # you can't specify a positional after keyword argument
+# you can't specify a positional after keyword argument
+# def my_parameter_function(qty, item="fruits", 3.00):
 #     print(f"{qty} {item} costs ${price:.2f}")
-#
-#
+
+
 # my_parameter_function(2, item="jello", price=2.00)
 
-# was not working on Pycharm, run in another interpreter
+# # adding unlimited arguments
+# def unlimited_args(*args):  # the args can be any name but in documentation *args is used
+#     print(f"my tuple of arguments", args[0:])
+
+
+# unlimited_args("rene", "jose", "john")
+
+# # was not working on Pycharm, run in another interpreter
+
+
 # def print_list(my_list=[]):
 #     my_list.append('###')
 #     return my_list
-#
-#
+
+
 # print_list(['Sam', 'Joe', 'Beth'])
 # print_list()
 # print_list()
+
+# this list will continue to append the ### and it points the the same memory spot
+# def print_list(my_list=[]):
+#     my_list.append('###')
+#     print(id(my_list))
+#     return my_list
+
+
+# print_list()
+
+# # to change above behavior do the following
+# def print_list(my_list=None):
+#     if my_list is None:
+#         my_list = []
+#         my_list.append("###")
+#     print(id(my_list))
+#     return my_list
+
+
+# print_list()
+
 
 '''
 # while loop, until the test becomes false
