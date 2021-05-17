@@ -37,13 +37,15 @@ for letter in chosen_word:
         print('wrong')
 '''
 import random
-word_list = ["aardvark", "baboon", "camel"]
+from hangman_words import word_list
+from hangman_art import stages, logo
 
 chosen_word = random.choice(word_list)
 chosen_word_length = len(chosen_word)
 
 # Testing code
-print(f'Chosen word is {chosen_word}.')
+#print(f'Chosen word is {chosen_word}.')
+print(logo)
 
 # TODO-1PART2: - Create an empty List called display.
 # For each letter in the chosen_word, add a "_" to 'display'.
